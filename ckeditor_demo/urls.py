@@ -13,7 +13,7 @@ if django.VERSION >= (1, 8):
         url(r'^$', ckeditor_form_view, name='ckeditor-form'),
         url(r'^admin/', include(admin.site.urls)),
         url(r'^ckeditor/', include('ckeditor_uploader.urls')),
-        url(r'^static/(?P<path>.*)$', views.serve),
+        url(r'^static/(?P<path>.*)$', 'views.serve'),
         url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
             'document_root': settings.MEDIA_ROOT,
         }),
